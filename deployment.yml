@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapipostgres-app-deployment
+  namespace: fastapipostgres-app
+  labels:
+    app: fastapipostgres-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: fastapipostgres-app
+
+  template:
+    metadata:
+      labels:
+        app: fastapipostgres-app
+
+    spec:
+      enableServiceLinks: false
+
+      containers:
+        - name: fastapipostgres-app
+          image: imrandocker3656/simple_fastapi:k8s
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8005
+            
