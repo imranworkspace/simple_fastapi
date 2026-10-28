@@ -8,7 +8,7 @@ services:
     container_name: simple_fastapi
 
     ports:
-      - "8010:8010"
+      - "8005:8005"
 
     restart: unless-stopped
     command: ["/simple_fastapi/entrypoint.sh"]

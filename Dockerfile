@@ -15,7 +15,7 @@ RUN chmod +x /simple_fastapi/entrypoint.sh
 
 
 # Expose FastAPI port
-EXPOSE 8010
+EXPOSE 8005
 
 # Start FastAPI in development mode
 #CMD ["uvicorn", "app_ex.main:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
